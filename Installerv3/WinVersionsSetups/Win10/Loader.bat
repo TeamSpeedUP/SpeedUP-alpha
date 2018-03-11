@@ -5,6 +5,7 @@ call WSEARCH.bat
 pause
 call TELEMDISABLE.bat
 echo Activating %TEMP% Cleaner
+pause
 
 del /s /f /q c:\windows\temp\*.*
 

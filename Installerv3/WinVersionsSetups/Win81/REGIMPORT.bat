@@ -1,0 +1,1 @@
+regedit /s Faster.bat
