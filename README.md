@@ -1,9 +1,9 @@
 # SpeedUP-alpha
 Speed UP any windows version
 
-Features:
+# Features:
 Speed up any windows version (WIP)
 Delete TEMP files easy.
 
-Changelog:
+# Changelog:
 v1.0: Added Windows 8.1 support
