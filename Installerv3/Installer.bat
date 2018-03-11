@@ -26,12 +26,12 @@ goto 10
 )
 
 :10
-start %cd%\WinVersionsSetups\Win10.bat
+start %cd%\WinVersionsSetups\Win10\Win10.bat
 exit
 
 
 :81
-start %cd%\WinVersionsSetups\Win81.bat
+start %cd%\WinVersionsSetups\Win81\Win81.bat
 exit
 
 :8

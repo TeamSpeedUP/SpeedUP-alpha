@@ -1,0 +1,1 @@
+regedit /s NOANIM.reg
