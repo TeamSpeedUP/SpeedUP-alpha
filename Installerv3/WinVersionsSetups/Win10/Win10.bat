@@ -12,12 +12,14 @@ echo =============
 echo.
 echo 1) Apply All Fixes + IMPROVMENTS
 echo 2) Clean TEMP
-echo 3) Exit
+echo 3) Turn On Fast boot
+echo 4) EXIT
 echo.
 set /p web=Type option:
 if "%web%"=="1" goto SETUP1
 if "%web%"=="2" goto CLEAR
-if "%web%"=="3" exit
+if "%web%"=="3" goto Fast-Boot
+if "%web%"=="4" exit
 
 
 :CLEAR
@@ -40,6 +42,12 @@ echo Done!
 pause
 
 
+:Fast-Boot
+echo Now turning on fastboot
+powercfg /hibernate on
+echo Done
+pause
+goto home
 
 
 :SETUP1
