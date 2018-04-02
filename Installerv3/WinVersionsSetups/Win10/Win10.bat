@@ -40,6 +40,7 @@ clear
 
 echo Done!
 pause
+goto home
 
 
 :Fast-Boot
@@ -53,4 +54,6 @@ goto home
 :SETUP1
 cd %~dp0
 call Loader.bat
-exit
+echo Done!
+pause
+goto home

@@ -38,7 +38,7 @@ md %temp%
 
 echo Done!
 pause
-
+goto :home
 
 
 
