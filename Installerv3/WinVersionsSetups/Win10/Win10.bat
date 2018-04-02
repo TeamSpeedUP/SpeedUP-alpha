@@ -34,6 +34,7 @@ del /s /f /q %temp%\*.*
 rd /s /q %temp%
 
 md %temp%
+clear
 
 echo Done!
 pause
@@ -44,4 +45,4 @@ pause
 :SETUP1
 cd %~dp0
 call Loader.bat
-close
+exit
