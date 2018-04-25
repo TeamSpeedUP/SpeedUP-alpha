@@ -1,11 +1,12 @@
 @echo off
+title "Running Scripts..."
 call REGIMPORT.bat
-pause
 call WSEARCH.bat
-pause
 call TELEMDISABLE.bat
-echo Activating %TEMP% Cleaner
+echo Activating %TEMP% Cleaner...
 pause
+cls
+title "Temp Cleaner,Prefetch Cleaner"
 
 del /s /f /q c:\windows\temp\*.*
 
