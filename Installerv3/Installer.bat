@@ -39,7 +39,7 @@ start %cd%\WinVersionsSetups\Win8.bat
 exit
 
 :7
-start %cd%\WinVersionsSetups\Win7.bat
+start %cd%\WinVersionsSetups\Win7\Win7.bat
 exit
 
 :Vista
