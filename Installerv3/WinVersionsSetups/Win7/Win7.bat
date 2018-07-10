@@ -13,13 +13,22 @@ echo =============
 echo.
 echo 1) Apply All Fixes + IMPROVMENTS
 echo 2) Clean TEMP
-echo 3) Exit
+echo 3) IS
+echo 4) Exit
 echo.
 set /p web=Type option:
 if "%web%"=="1" goto SETUP1
 if "%web%"=="2" goto CLEAR
-if "%web%"=="3" exit
+if "%web%"=="3" goto IS
+if "%web%"=="4" exit
 
+:IS
+netsh int tcp show global
+netsh int tcp set global chimney=enabled
+netsh int tcp set heuristics disabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+goto home
 
 :CLEAR
 del /s /f /q c:\windows\temp\*.*
