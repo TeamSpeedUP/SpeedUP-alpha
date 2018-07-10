@@ -12,14 +12,16 @@ echo =============
 echo.
 echo 1) Apply All Fixes + IMPROVMENTS
 echo 2) Clean TEMP
-echo 3) Turn On Fast boot
-echo 4) EXIT
+echo 3) Speed UP Internet
+echo 4) Turn On Fast boot
+echo 5) EXIT
 echo.
 set /p web=Type option:
 if "%web%"=="1" goto SETUP1
 if "%web%"=="2" goto CLEAR
-if "%web%"=="3" goto Fast-Boot
-if "%web%"=="4" exit
+if "%web%"=="3" goto IS
+if "%web%"=="4" goto Fast-Boot
+if "%web%"=="5" exit
 
 
 :CLEAR
@@ -37,7 +39,6 @@ rd /s /q %temp%
 
 md %temp%
 clear
-
 echo Done!
 pause
 goto home
@@ -50,6 +51,13 @@ echo Done
 pause
 goto home
 
+:IS
+netsh int tcp show global
+netsh int tcp set global chimney=enabled
+netsh int tcp set heuristics disabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+goto home
 
 :SETUP1
 cd %~dp0
